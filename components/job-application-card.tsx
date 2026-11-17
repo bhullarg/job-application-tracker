@@ -50,6 +50,7 @@ export default function JobApplicationCard({
     tags: job.tags?.join(", ") || "",
     description: job.description || "",
   });
+
   async function handleUpdate(e: React.FormEvent) {
     e.preventDefault();
     try {
@@ -70,6 +71,7 @@ export default function JobApplicationCard({
       console.error("Failed to update job application: ", err);
     }
   }
+
   async function handleDelete() {
     try {
       const result = await deleteJobApplication(job._id);
@@ -80,6 +82,7 @@ export default function JobApplicationCard({
       console.error("Failed to delete job application: ", err);
     }
   }
+
   async function handleMove(newColumnId: string) {
     try {
       const result = await updateJobApplication(job._id, {
