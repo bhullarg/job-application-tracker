@@ -135,12 +135,13 @@ export default function JobApplicationCard({
             </div>
             <div>
               <DropdownMenu>
-                <DropdownMenuTrigger>
-                  <MoreVertical />
-                  {/* <Button variant="ghost" size="icon" className="h-6 w-6">
-                    <MoreVertical />
-                  </Button> */}
-                </DropdownMenuTrigger>
+                <DropdownMenuTrigger
+                  render={
+                    <Button variant="ghost" size="icon" className="h-6 w-6">
+                      <MoreVertical />
+                    </Button>
+                  }
+                />
                 <DropdownMenuContent align="end">
                   <DropdownMenuItem onClick={() => setIsEditing(true)}>
                     <Edit2 className="mr-2 h-4 w-4" />
